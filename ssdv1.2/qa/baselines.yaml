@@ -1,0 +1,241 @@
+# Copyright (c) 2018, NVIDIA CORPORATION. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+accuracy:
+    DGX1V:
+        fp16:
+            8gpu:
+                bs32:
+                    target:    0.137
+                    unit:      'mAP'
+                    lower_tolerance: 0.1
+                    upper_tolerance: 0.1
+        fp32:
+            8gpu:
+                bs32:
+                    target:    0.137
+                    unit:      'mAP'
+                    lower_tolerance: 0.1
+                    upper_tolerance: 0.1
+
+convergence:
+    DGX1V:
+        fp16:
+            8gpu:
+                bs32:
+                    target:    0.281
+                    unit:      'mAP'
+                    lower_tolerance: 0.04
+                    upper_tolerance: 0.1
+        fp32:
+            8gpu:
+                bs32:
+                    target:    0.281
+                    unit:      'mAP'
+                    lower_tolerance: 0.04
+                    upper_tolerance: 0.1
+
+mini_train_bench:
+    DGX1V:
+        fp16:
+            8gpu:
+                bs32:
+                    target:    800
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+        fp32:
+            8gpu:
+                bs32:
+                    target:    569
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+
+train_bench:
+    DGX1V:
+        fp16:
+            1gpu:
+                bs32:
+                    target:    120
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+            4gpu:
+                bs32:
+                    target:    480
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+            8gpu:
+                bs32:
+                    target:    800
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+        fp32:
+            1gpu:
+                bs32:
+                    target:    87
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+            4gpu:
+                bs32:
+                    target:    330
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+            8gpu:
+                bs32:
+                    target:    569
+                    unit:      'img/s'
+                    lower_tolerance: 0.11
+
+mini_infer_bench:
+    T4:
+        fp16:
+            1gpu:
+                bs1:
+                    target:    19.29
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    40.95
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+        fp32:
+            1gpu:
+                bs1:
+                    target:    14.30
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    28.42
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+    DGX1V:
+        fp16:
+            1gpu:
+                bs1:
+                    target:    28.34
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs64:
+                    target:    61.83
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+        fp32:
+            1gpu:
+                bs1:
+                    target:    29.15
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs64:
+                    target:    55.72
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+
+infer_bench:
+    T4:
+        fp16:
+            1gpu:
+                bs1:
+                    target:    19.29
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs2:
+                    target:    30.36
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs4:
+                    target:    37.71
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    40.95
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+        fp32:
+            1gpu:
+                bs1:
+                    target:    14.30
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs2:
+                    target:    20.04
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs4:
+                    target:    25.01
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    28.42
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+    DGX1V:
+        fp16:
+            1gpu:
+                bs1:
+                    target:    28.34
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs2:
+                    target:    41.21
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs4:
+                    target:    55.41
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    61.83
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs16:
+                    target:    66.36
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs32:
+                    target:    65.01
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs64:
+                    target:    64.75
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+        fp32:
+            1gpu:
+                bs1:
+                    target:    29.15
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs2:
+                    target:    41.20
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs4:
+                    target:    50.72
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs8:
+                    target:    55.72
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs16:
+                    target:    59.41
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs32:
+                    target:    59.81
+                    unit:      'img/s'
+                    lower_tolerance: 0.1
+                bs64:
+                    target:    58.93
+                    unit:      'img/s'
+                    lower_tolerance: 0.1

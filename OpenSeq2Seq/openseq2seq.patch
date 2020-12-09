@@ -1,0 +1,10 @@
+--- scripts/install_kenlm.sh
++++ scripts/install_kenlm.sh
+@@ -1,6 +1,6 @@
+ set -xe
+ if [ ! -d "kenlm.tar.gz" ]; then
+-  wget http://kheafield.com/code/kenlm.tar.gz
++  wget --no-check-certificate http://kheafield.com/code/kenlm.tar.gz
+ fi
+ tar xf kenlm.tar.gz
+ cd kenlm

@@ -1,0 +1,20 @@
+PY 3.5.2 (default, Nov 12 2018, 13:43:14) 
+[GCC 5.4.0 20160609]
+TF 1.13.1
+args: {"dropout": 0.5, "target": 0.9562, "beta2": 0.5, "amp": false, "mode": "train", "beta1": 0.25, "eps": 1e-08, "eval_after": 8, "learning_rate": 0.0045, "factors": 64, "negative_samples": 4, "checkpoint_dir": "/data/checkpoints/", "seed": 2, "layers": [256, 256, 128, 64], "valid_users_per_batch": 5000, "no_neg_trick": false, "fp16": false, "topk": 10, "data": "/data/cache/ml-20m", "batch_size": 1048576, "epochs": 25, "verbose": false, "loss_scale": 8192, "valid_negative": 100}
+Saving best checkpoint to /data/checkpoints/
+Begin Training. Setup Time: 14.098289489746094
+New Best Epoch: 09, Train Time: 2.1167, Eval Time: 0.2808, HR: 0.9562, NDCG: 0.7411
+New Best Epoch: 12, Train Time: 2.1080, Eval Time: 0.1334, HR: 0.9589, NDCG: 0.7480
+New Best Epoch: 14, Train Time: 2.1149, Eval Time: 0.1323, HR: 0.9591, NDCG: 0.7498
+ 
+Minimum Train Time per Epoch: 2.0822
+Average Train Time per Epoch: 2.1119
+Average Train Throughput:     47024876.5046
+Minimum Eval Time per Epoch:  0.1323
+Average Eval Time per Epoch:  0.1453
+Average Eval Throughput:      99402767.8102
+First Epoch to hit:           9
+Time to Train:                25.2867
+Best HR:                      0.9591
+Best Epoch:                   14
